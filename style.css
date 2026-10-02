@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+
+    font-family: 'Poppins', sans-serif;
+
+    background-image: url("Main1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #67201f;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    position: relative;
+}
+
+
+/* =========================
+   TOP TEXT
+========================= */
+
+.eyebrow {
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: #671c20;
+
+    margin-bottom: 22px;
+
+    text-shadow:
+        0 1px 5px rgba(255, 220, 220, 0.8);
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+h1 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(50px, 7vw, 90px);
+
+    line-height: 1.02;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    color: #641c1c;
+
+    text-shadow:
+        0 2px 8px rgba(255, 210, 215, 0.7);
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.divider span:not(.heart) {
+    width: 70px;
+    height: 1px;
+
+    background: #8d4141;
+}
+
+.divider .heart {
+    color: #762527;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote {
+    font-family: 'Caveat', cursive;
+
+    font-size: clamp(28px, 3vw, 36px);
+
+    line-height: 1.2;
+
+    color: #713032;
+
+    margin-bottom: 35px;
+
+    text-shadow:
+        0 1px 5px rgba(255, 220, 220, 0.8);
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.story-button {
+    display: inline-block;
+
+    padding: 15px 32px;
+
+    border-radius: 50px;
+
+    background: #70231f;
+
+    border: 2px solid #70231f;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(100, 20, 20, 0.25);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.story-button span {
+    display: inline-block;
+
+    margin-left: 8px;
+
+    transition: transform 0.3s ease;
+}
+
+.story-button:hover {
+    background: #9b3838;
+
+    border-color: #9b3838;
+
+    color: #ffffff;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(100, 20, 20, 0.35);
+}
+
+.story-button:hover span {
+    transform: translateX(6px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    position: absolute;
+
+    bottom: 25px;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    color: #702e31;
+
+    text-shadow:
+        0 1px 5px rgba(255, 220, 220, 0.8);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 47px;
+    }
+
+    .eyebrow {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+    .divider span:not(.heart) {
+        width: 45px;
+    }
+
+    .quote {
+        font-size: 27px;
+    }
+
+    .story-button {
+        padding: 13px 26px;
+    }
+}
+```

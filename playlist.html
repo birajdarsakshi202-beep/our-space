@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Soundtrack</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            background:#e2d4ad;
+            font-family:'Poppins',sans-serif;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            min-height:100vh;
+        }
+
+        .playlist-container{
+            width:90%;
+            max-width:900px;
+            text-align:center;
+        }
+
+        h1{
+            font-family:'Playfair Display',serif;
+            font-size:55px;
+            color:#6A1E1E;
+            margin-bottom:10px;
+        }
+
+        .subtitle{
+            color:#666;
+            margin-bottom:50px;
+            font-size:18px;
+        }
+
+        .song-card{
+
+            background:white;
+
+            display:flex;
+            align-items:center;
+
+            gap:30px;
+
+            padding:25px;
+
+            border-radius:20px;
+
+            box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+            transition:.3s;
+        }
+
+        .song-card:hover{
+
+            transform:translateY(-5px);
+
+        }
+
+        .song-card img{
+
+            width:180px;
+
+            height:180px;
+
+            object-fit:cover;
+
+            border-radius:15px;
+
+        }
+
+        .song-info{
+
+            text-align:left;
+
+        }
+
+        .song-info h2{
+
+            color:#6A1E1E;
+
+            margin-bottom:10px;
+
+            font-size:30px;
+
+        }
+
+        .artist{
+
+            color:#888;
+
+            margin-bottom:20px;
+
+        }
+
+        .memory{
+
+            margin-bottom:25px;
+
+            line-height:1.6;
+
+        }
+
+        .listen-btn{
+
+            text-decoration:none;
+
+        }
+
+        .listen-btn button{
+
+            background:#6A1E1E;
+
+            color:white;
+
+            border:none;
+
+            padding:12px 30px;
+
+            border-radius:30px;
+
+            cursor:pointer;
+
+            font-size:16px;
+
+            transition:.3s;
+
+        }
+
+        .listen-btn button:hover{
+
+            background:#8c2f2f;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="song-card">
+
+    <img src="images/song1.jpg" alt="Album Cover">
+
+    <div class="song-info">
+
+        <h2>Until I Found You</h2>
+
+        <p class="artist">
+            Stephen Sanchez
+        </p>
+
+        <p class="memory">
+            "The song that always reminds me of you."
+        </p>
+
+        <iframe
+            style="border-radius:12px"
+            src="https://open.spotify.com/embed/track/3WMj8moIAXJhHsyLaqIIHI?utm_source=generator"
+            width="100%"
+            height="152"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+        </iframe>
+
+    </div>
+
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Time Together ♡</title>
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            font-family: 'Poppins', sans-serif;
+
+            background:
+                linear-gradient(
+                    rgba(255, 239, 226, 0.88),
+                    rgba(255, 239, 226, 0.88)
+                ),
+                url("Main1.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            color: #74301f;
+
+            padding: 50px 20px 80px;
+
+            overflow-x: hidden;
+        }
+
+
+        /* ================================
+           FLOATING HEARTS
+        ================================= */
+
+        .floating-heart {
+
+            position: fixed;
+
+            color: rgba(139, 73, 56, 0.18);
+
+            font-size: 24px;
+
+            pointer-events: none;
+
+            z-index: 0;
+        }
+
+        .heart-1 {
+            top: 18%;
+            left: 8%;
+        }
+
+        .heart-2 {
+            top: 38%;
+            right: 7%;
+        }
+
+        .heart-3 {
+            bottom: 15%;
+            left: 12%;
+        }
+
+        .heart-4 {
+            bottom: 25%;
+            right: 10%;
+        }
+
+
+        /* ================================
+           PAGE
+        ================================= */
+
+        .page {
+
+            width: 100%;
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        /* ================================
+           TIME TOGETHER CARD
+        ================================= */
+
+        .together-card {
+
+            background:
+                rgba(255, 253, 251, 0.94);
+
+            border-radius: 28px;
+
+            padding: 65px 50px 55px;
+
+            border: 1px solid
+                rgba(176, 113, 92, 0.25);
+
+            box-shadow:
+                0 18px 45px
+                rgba(91, 39, 28, 0.12);
+
+            position: relative;
+        }
+
+
+        /* TAPE */
+
+        .tape {
+
+            position: absolute;
+
+            top: -13px;
+
+            left: 50%;
+
+            transform:
+                translateX(-50%)
+                rotate(-1deg);
+
+            width: 100px;
+
+            height: 28px;
+
+            background:
+                repeating-linear-gradient(
+                    -45deg,
+
+                    rgba(
+                        192,
+                        149,
+                        131,
+                        0.62
+                    ),
+
+                    rgba(
+                        192,
+                        149,
+                        131,
+                        0.62
+                    ) 7px,
+
+                    rgba(
+                        229,
+                        201,
+                        188,
+                        0.72
+                    ) 7px,
+
+                    rgba(
+                        229,
+                        201,
+                        188,
+                        0.72
+                    ) 14px
+                );
+        }
+
+
+        /* ================================
+           HEADER
+        ================================= */
+
+        .header {
+
+            text-align: center;
+
+            margin-bottom: 45px;
+        }
+
+
+        .badge {
+
+            display: inline-block;
+
+            padding: 8px 20px;
+
+            border-radius: 30px;
+
+            border: 1px solid
+                rgba(140, 65, 45, 0.25);
+
+            background:
+                rgba(255, 248, 243, 0.75);
+
+            color: #8b4938;
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 20px;
+        }
+
+
+        h1 {
+
+            font-family:
+                'Playfair Display',
+                serif;
+
+            font-size:
+                clamp(45px, 6vw, 65px);
+
+            color: #7b2e1d;
+
+            margin-bottom: 12px;
+        }
+
+
+        .subtitle {
+
+            font-size: 17px;
+
+            color: #9a604e;
+        }
+
+
+        /* ================================
+           TIME GRID
+        ================================= */
+
+        .time-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap: 18px;
+
+            max-width: 930px;
+
+            margin: auto;
+        }
+
+
+        .time-box {
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(252, 229, 229, 0.96),
+                    rgba(250, 228, 217, 0.96)
+                );
+
+            border: 1px solid
+                rgba(
+                    176,
+                    113,
+                    92,
+                    0.25
+                );
+
+            border-radius: 22px;
+
+            min-height: 145px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            box-shadow:
+                0 10px 22px
+                rgba(
+                    91,
+                    39,
+                    28,
+                    0.08
+                );
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .time-box::after {
+
+            content: "";
+
+            position: absolute;
+
+            bottom: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 4px;
+
+            background: #7b2e1d;
+        }
+
+
+        .number {
+
+            font-family:
+                'Playfair Display',
+                serif;
+
+            font-size: 48px;
+
+            font-weight: 700;
+
+            color: #7b2e1d;
+
+            line-height: 1;
+
+            margin-bottom: 10px;
+        }
+
+
+        .label {
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            color: #a4776a;
+
+            text-transform: uppercase;
+        }
+
+
+        /* ================================
+           MILESTONES
+        ================================= */
+
+        .milestone-area {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin-top: 32px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .milestone {
+
+            padding: 10px 20px;
+
+            border-radius: 30px;
+
+            font-size: 14px;
+
+            border: 1px solid
+                rgba(
+                    140,
+                    65,
+                    45,
+                    0.25
+                );
+
+            background:
+                rgba(
+                    255,
+                    248,
+                    243,
+                    0.75
+                );
+
+            color: #7b2e1d;
+        }
+
+
+        .milestone.active {
+
+            background: #86351f;
+
+            color: white;
+
+            border-color: #86351f;
+        }
+
+
+        .bottom-message {
+
+            text-align: center;
+
+            margin-top: 40px;
+
+            font-family:
+                'Caveat',
+                cursive;
+
+            font-size: 27px;
+
+            color: #8b4938;
+        }
+
+
+        /* =================================
+           COMPATIBILITY SECTION
+        ================================= */
+
+        .compatibility-section {
+
+            width: 100%;
+
+            max-width: 1100px;
+
+            margin: 80px auto 30px;
+
+            padding: 65px 45px 70px;
+
+            background:
+                rgba(255, 253, 251, 0.94);
+
+            border-radius: 28px;
+
+            border: 1px solid
+                rgba(
+                    176,
+                    113,
+                    92,
+                    0.25
+                );
+
+            box-shadow:
+                0 18px 45px
+                rgba(
+                    91,
+                    39,
+                    28,
+                    0.12
+                );
+        }
+
+
+        .compatibility-header {
+
+            text-align: center;
+
+            margin-bottom: 45px;
+        }
+
+
+        .compatibility-badge {
+
+            display: inline-block;
+
+            padding: 8px 20px;
+
+            border-radius: 30px;
+
+            border: 1px solid
+                rgba(
+                    140,
+                    65,
+                    45,
+                    0.25
+                );
+
+            background:
+                rgba(
+                    255,
+                    248,
+                    243,
+                    0.75
+                );
+
+            color: #8b4938;
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .compatibility-header h2 {
+
+            font-family:
+                'Playfair Display',
+                serif;
+
+            font-size:
+                clamp(
+                    40px,
+                    5vw,
+                    55px
+                );
+
+            color: #7b2e1d;
+
+            margin-bottom: 12px;
+        }
+
+
+        .compatibility-header p {
+
+            font-size: 17px;
+
+            color: #9a604e;
+        }
+
+
+        .compatibility-divider {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 14px;
+
+            margin-top: 30px;
+        }
+
+
+        .compatibility-divider span {
+
+            color: #91402d;
+        }
+
+
+        .compatibility-divider span:first-child,
+        .compatibility-divider span:last-child {
+
+            width: 45px;
+
+            height: 1px;
+
+            background: #c69a8a;
+        }
+
+
+        /* ================================
+           NAME INPUTS
+        ================================= */
+
+        .compatibility-content {
+
+            max-width: 700px;
+
+            margin: auto;
+        }
+
+
+        .name-fields {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr
+                55px
+                1fr;
+
+            align-items: end;
+
+            gap: 18px;
+        }
+
+
+        .name-group label {
+
+            display: block;
+
+            color: #a4776a;
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 9px;
+        }
+
+
+        .name-group input {
+
+            width: 100%;
+
+            height: 60px;
+
+            padding: 0 18px;
+
+            border-radius: 18px;
+
+            border: 1px solid
+                rgba(
+                    176,
+                    113,
+                    92,
+                    0.35
+                );
+
+            background:
+                rgba(
+                    255,
+                    250,
+                    247,
+                    0.9
+                );
+
+            color: #74301f;
+
+            font-family:
+                'Poppins',
+                sans-serif;
+
+            font-size: 16px;
+
+            outline: none;
+        }
+
+
+        .heart-middle {
+
+            width: 48px;
+
+            height: 48px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #f5e7df;
+
+            border: 1px solid
+                rgba(
+                    176,
+                    113,
+                    92,
+                    0.30
+                );
+
+            color: #86351f;
+
+            font-size: 20px;
+
+            margin-bottom: 6px;
+        }
+
+
+        /* ================================
+           CALCULATE BUTTON
+        ================================= */
+
+        .calculate-compatibility {
+
+            width: 100%;
+
+            height: 58px;
+
+            margin-top: 28px;
+
+            border: none;
+
+            border-radius: 35px;
+
+            background: #a96d57;
+
+            color: white;
+
+            font-family:
+                'Poppins',
+                sans-serif;
+
+            font-size: 16px;
+
+            font-weight: 500;
+
+            cursor: pointer;
+
+            transition: 0.3s ease;
+        }
+
+
+        .calculate-compatibility:hover {
+
+            background: #86351f;
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        /* ================================
+           CALCULATING
+        ================================= */
+
+        .calculating {
+
+            display: none;
+
+            text-align: center;
+
+            margin-top: 35px;
+
+            padding: 30px;
+
+            background:
+                rgba(
+                    255,
+                    245,
+                    240,
+                    0.8
+                );
+
+            border-radius: 22px;
+        }
+
+
+        .calculating.show {
+
+            display: block;
+
+            animation:
+                fadeIn
+                0.4s ease;
+        }
+
+
+        .calculating-title {
+
+            font-family:
+                'Caveat',
+                cursive;
+
+            font-size: 28px;
+
+            color: #8b4938;
+
+            margin-bottom: 18px;
+        }
+
+
+        .progress-bar {
+
+            width: 100%;
+
+            max-width: 450px;
+
+            height: 8px;
+
+            background: #ead8d0;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            margin: auto;
+        }
+
+
+        .progress {
+
+            width: 0%;
+
+            height: 100%;
+
+            background: #86351f;
+
+            border-radius: 20px;
+
+            transition:
+                width 2s ease;
+        }
+
+
+        /* ================================
+           RESULT
+        ================================= */
+
+        .compatibility-result {
+
+            display: none;
+
+            text-align: center;
+
+            margin-top: 40px;
+
+            padding: 35px 20px;
+        }
+
+
+        .compatibility-result.show {
+
+            display: block;
+
+            animation:
+                resultAppear
+                0.8s ease;
+        }
+
+
+        .score-label {
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            color: #a4776a;
+
+            margin-bottom: 20px;
+        }
+
+
+        .score-circle {
+
+            width: 175px;
+
+            height: 175px;
+
+            border-radius: 50%;
+
+            border: 9px solid #86351f;
+
+            margin: 0 auto 25px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #86351f;
+
+            background:
+                rgba(
+                    255,
+                    248,
+                    243,
+                    0.65
+                );
+
+            box-shadow:
+                0 10px 30px
+                rgba(
+                    100,
+                    40,
+                    25,
+                    0.12
+                );
+        }
+
+
+        .score-circle span {
+
+            font-family:
+                'Playfair Display',
+                serif;
+
+            font-size: 45px;
+
+            font-weight: 700;
+
+            line-height: 1;
+        }
+
+
+        .score-heart {
+
+            font-size: 18px;
+
+            margin-top: 7px;
+        }
+
+
+        .compatibility-result h3 {
+
+            font-family:
+                'Playfair Display',
+                serif;
+
+            color: #7b2e1d;
+
+            font-size: 32px;
+
+            margin-bottom: 6px;
+        }
+
+
+        .couple-names {
+
+            color: #a4776a;
+
+            font-size: 16px;
+        }
+
+
+        /* ================================
+           ANIMATIONS
+        ================================= */
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+
+        @keyframes resultAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(20px)
+                    scale(0.95);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0)
+                    scale(1);
+            }
+        }
+
+
+        /* ================================
+           MOBILE
+        ================================= */
+
+        @media (max-width: 800px) {
+
+            .together-card {
+
+                padding:
+                    50px
+                    25px
+                    40px;
+            }
+
+
+            .time-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .time-box {
+
+                min-height: 125px;
+            }
+
+
+            .number {
+
+                font-size: 40px;
+            }
+
+
+            .compatibility-section {
+
+                padding:
+                    50px
+                    25px
+                    55px;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            body {
+
+                padding:
+                    35px
+                    12px
+                    60px;
+            }
+
+
+            .together-card,
+            .compatibility-section {
+
+                padding:
+                    45px
+                    15px
+                    40px;
+
+                border-radius: 22px;
+            }
+
+
+            h1 {
+
+                font-size: 40px;
+            }
+
+
+            .subtitle {
+
+                font-size: 15px;
+            }
+
+
+            .time-grid {
+
+                gap: 12px;
+            }
+
+
+            .time-box {
+
+                min-height: 115px;
+
+                border-radius: 18px;
+            }
+
+
+            .number {
+
+                font-size: 34px;
+            }
+
+
+            .label {
+
+                font-size: 10px;
+            }
+
+
+            .bottom-message {
+
+                font-size: 23px;
+            }
+
+
+            .name-fields {
+
+                grid-template-columns: 1fr;
+
+                gap: 12px;
+            }
+
+
+            .heart-middle {
+
+                margin: 0 auto;
+            }
+
+
+            .compatibility-header h2 {
+
+                font-size: 34px;
+            }
+
+
+            .score-circle {
+
+                width: 155px;
+
+                height: 155px;
+            }
+
+
+            .score-circle span {
+
+                font-size: 40px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- FLOATING HEARTS -->
+
+    <div class="floating-heart heart-1">♡</div>
+
+    <div class="floating-heart heart-2">♡</div>
+
+    <div class="floating-heart heart-3">♡</div>
+
+    <div class="floating-heart heart-4">♡</div>
+
+
+    <main class="page">
+
+
+        <!-- =================================
+             TIME TOGETHER
+        ================================== -->
+
+        <section class="together-card">
+
+            <div class="tape"></div>
+
+
+            <header class="header">
+
+                <div class="badge">
+
+                    💕 &nbsp; SINCE 10 JULY 2026
+
+                </div>
+
+
+                <h1>
+                    Time Together
+                </h1>
+
+
+                <p class="subtitle">
+                    We've been together for
+                </p>
+
+            </header>
+
+
+            <!-- TIME -->
+
+            <div class="time-grid">
+
+
+                <div class="time-box">
+
+                    <div
+                        class="number"
+                        id="months">
+                        00
+                    </div>
+
+                    <div class="label">
+                        Months
+                    </div>
+
+                </div>
+
+
+                <div class="time-box">
+
+                    <div
+                        class="number"
+                        id="days">
+                        00
+                    </div>
+
+                    <div class="label">
+                        Days
+                    </div>
+
+                </div>
+
+
+                <div class="time-box">
+
+                    <div
+                        class="number"
+                        id="hours">
+                        00
+                    </div>
+
+                    <div class="label">
+                        Hours
+                    </div>
+
+                </div>
+
+
+                <div class="time-box">
+
+                    <div
+                        class="number"
+                        id="minutes">
+                        00
+                    </div>
+
+                    <div class="label">
+                        Minutes
+                    </div>
+
+                </div>
+
+
+                <div class="time-box">
+
+                    <div
+                        class="number"
+                        id="seconds">
+                        00
+                    </div>
+
+                    <div class="label">
+                        Seconds
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- MILESTONES -->
+
+            <div class="milestone-area">
+
+                <div
+                    class="milestone active"
+                    id="daysTogether">
+                    📅 0 days together
+                </div>
+
+
+                <div
+                    class="milestone"
+                    id="nextMilestone">
+                    ✨ Loading...
+                </div>
+
+            </div>
+
+
+            <div class="bottom-message">
+
+                Every second with you is a second
+                I never want to forget. ♡
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             COMPATIBILITY CALCULATOR
+        ================================== -->
+
+        <section class="compatibility-section">
+
+
+            <div class="compatibility-header">
+
+
+                <div class="compatibility-badge">
+
+                    💗 &nbsp; LOVE TEST
+
+                </div>
+
+
+                <h2>
+                    Compatibility Calculator
+                </h2>
+
+
+                <p>
+                    Enter your name to see how compatible you are
+                </p>
+
+
+                <div class="compatibility-divider">
+
+                    <span></span>
+
+                    <span>♡</span>
+
+                    <span></span>
+
+                </div>
+
+            </div>
+
+
+            <div class="compatibility-content">
+
+
+                <!-- NAMES -->
+
+                <div class="name-fields">
+
+
+                    <div class="name-group">
+
+                        <label>
+                            THEM
+                        </label>
+
+                        <input
+                            type="text"
+                            id="theirName"
+                            value="Sakshi"
+                            readonly>
+
+                    </div>
+
+
+                    <div class="heart-middle">
+                        ♥
+                    </div>
+
+
+                    <div class="name-group">
+
+                        <label>
+                            YOU
+                        </label>
+
+                        <input
+                            type="text"
+                            id="yourName"
+                            placeholder="Enter your name">
+
+                    </div>
+
+                </div>
+
+
+                <!-- BUTTON -->
+
+                <button
+                    class="calculate-compatibility"
+                    id="calculateButton"
+                    type="button"
+                    onclick="calculateLove()">
+
+                    Calculate Compatibility
+
+                </button>
+
+
+                <!-- CALCULATING -->
+
+                <div
+                    class="calculating"
+                    id="calculating">
+
+                    <div class="calculating-title">
+
+                        Calculating your love story... ♡
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress"
+                            id="progress">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RESULT -->
+
+                <div
+                    class="compatibility-result"
+                    id="compatibilityResult">
+
+
+                    <p class="score-label">
+
+                        YOUR COMPATIBILITY SCORE
+
+                    </p>
+
+
+                    <div class="score-circle">
+
+                        <span id="lovePercentage">
+                            96%
+                        </span>
+
+                        <div class="score-heart">
+                            ♥
+                        </div>
+
+                    </div>
+
+
+                    <h3 id="loveMessage">
+
+                        Perfect Match!
+
+                    </h3>
+
+
+                    <p
+                        class="couple-names"
+                        id="coupleNames">
+
+                        alok &amp; Sakshi
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
+    <script>
+
+
+        /* =================================
+           TIME TOGETHER
+        ================================= */
+
+        const startDate =
+            new Date(
+                2026,
+                6,
+                10,
+                0,
+                0,
+                0
+            );
+
+
+        function updateTimer() {
+
+            const now =
+                new Date();
+
+
+            const difference =
+                now.getTime()
+                -
+                startDate.getTime();
+
+
+            if (difference < 0) {
+
+                return;
+
+            }
+
+
+            /* TOTAL DAYS */
+
+            const totalDays =
+                Math.floor(
+                    difference /
+                    (1000 * 60 * 60 * 24)
+                );
+
+
+            /* MONTHS */
+
+            let months =
+                (
+                    now.getFullYear()
+                    -
+                    startDate.getFullYear()
+                ) * 12
+                +
+                (
+                    now.getMonth()
+                    -
+                    startDate.getMonth()
+                );
+
+
+            let anniversary =
+                new Date(startDate);
+
+
+            anniversary.setMonth(
+                startDate.getMonth()
+                +
+                months
+            );
+
+
+            if (now < anniversary) {
+
+                months--;
+
+                anniversary =
+                    new Date(startDate);
+
+                anniversary.setMonth(
+                    startDate.getMonth()
+                    +
+                    months
+                );
+            }
+
+
+            /* REMAINING AFTER MONTHS */
+
+            const remaining =
+                now.getTime()
+                -
+                anniversary.getTime();
+
+
+            const days =
+                Math.floor(
+                    remaining /
+                    (1000 * 60 * 60 * 24)
+                );
+
+
+            const hours =
+                Math.floor(
+                    (
+                        remaining %
+                        (1000 * 60 * 60 * 24)
+                    )
+                    /
+                    (1000 * 60 * 60)
+                );
+
+
+            const minutes =
+                Math.floor(
+                    (
+                        remaining %
+                        (1000 * 60 * 60)
+                    )
+                    /
+                    (1000 * 60)
+                );
+
+
+            const seconds =
+                Math.floor(
+                    (
+                        remaining %
+                        (1000 * 60)
+                    )
+                    /
+                    1000
+                );
+
+
+            /* DISPLAY */
+
+            document
+                .getElementById("months")
+                .textContent =
+                String(months)
+                .padStart(2, "0");
+
+
+            document
+                .getElementById("days")
+                .textContent =
+                String(days)
+                .padStart(2, "0");
+
+
+            document
+                .getElementById("hours")
+                .textContent =
+                String(hours)
+                .padStart(2, "0");
+
+
+            document
+                .getElementById("minutes")
+                .textContent =
+                String(minutes)
+                .padStart(2, "0");
+
+
+            document
+                .getElementById("seconds")
+                .textContent =
+                String(seconds)
+                .padStart(2, "0");
+
+
+            /* TOTAL DAYS */
+
+            document
+                .getElementById("daysTogether")
+                .textContent =
+                "📅 "
+                +
+                totalDays
+                +
+                " days together";
+
+
+            /* NEXT 100 DAYS */
+
+            const nextMilestone =
+                Math.ceil(
+                    (totalDays + 1) / 100
+                ) * 100;
+
+
+            const daysLeft =
+                nextMilestone
+                -
+                totalDays;
+
+
+            document
+                .getElementById("nextMilestone")
+                .textContent =
+                "✨ "
+                +
+                daysLeft
+                +
+                " days to "
+                +
+                nextMilestone
+                +
+                " days together";
+
+        }
+
+
+        /* START TIMER */
+
+        updateTimer();
+
+        setInterval(
+            updateTimer,
+            1000
+        );
+
+
+
+        /* =================================
+           COMPATIBILITY
+        ================================= */
+
+        function calculateLove() {
+
+
+            const yourNameInput =
+                document
+                .getElementById("yourName");
+
+
+            const yourName =
+                yourNameInput
+                .value
+                .trim();
+
+
+            if (yourName === "") {
+
+                alert(
+                    "Enter your name first ♡"
+                );
+
+                yourNameInput.focus();
+
+                return;
+
+            }
+
+
+            /* GET NAMES */
+
+            const theirName =
+                document
+                .getElementById("theirName")
+                .value
+                .trim();
+
+
+            /* BUTTON */
+
+            const button =
+                document
+                .getElementById(
+                    "calculateButton"
+                );
+
+
+            /* CALCULATING BOX */
+
+            const calculating =
+                document
+                .getElementById(
+                    "calculating"
+                );
+
+
+            /* PROGRESS */
+
+            const progress =
+                document
+                .getElementById(
+                    "progress"
+                );
+
+
+            /* RESULT */
+
+            const result =
+                document
+                .getElementById(
+                    "compatibilityResult"
+                );
+
+
+            /* NAMES */
+
+            document
+                .getElementById(
+                    "coupleNames"
+                )
+                .textContent =
+                yourName
+                +
+                " & "
+                +
+                theirName;
+
+
+            /* BUTTON STATE */
+
+            button.disabled = true;
+
+            button.textContent =
+                "Calculating...";
+
+
+            /* SHOW CALCULATING */
+
+            calculating
+                .classList
+                .add("show");
+
+
+            /* PROGRESS */
+
+            setTimeout(
+                function() {
+
+                    progress.style.width =
+                        "100%";
+
+                },
+                100
+            );
+
+
+            /* SHOW RESULT */
+
+            setTimeout(
+                function() {
+
+                    calculating
+                        .classList
+                        .remove("show");
+
+
+                    /*
+                     * YOUR FIXED LOVE SCORE
+                     */
+
+                    document
+                        .getElementById(
+                            "lovePercentage"
+                        )
+                        .textContent =
+                        "96%";
+
+
+                    document
+                        .getElementById(
+                            "loveMessage"
+                        )
+                        .textContent =
+                        "Perfect Match!";
+
+
+                    result
+                        .classList
+                        .add("show");
+
+
+                    button.disabled =
+                        false;
+
+
+                    button.textContent =
+                        "Calculate Again ♡";
+
+
+                    progress.style.width =
+                        "0%";
+
+                },
+                2300
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

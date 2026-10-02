@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Things I Love About You ♡</title>
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+        /* ========================================
+           RESET
+        ======================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* ========================================
+           BODY
+        ======================================== */
+
+        body {
+
+            min-height: 100vh;
+
+            font-family: 'Poppins', sans-serif;
+
+            background:
+                linear-gradient(
+                    rgba(255, 239, 226, 0.88),
+                    rgba(255, 239, 226, 0.88)
+                ),
+                url("Main1.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-attachment: fixed;
+
+            color: #74301f;
+
+            overflow-x: hidden;
+
+        }
+
+
+        /* ========================================
+           MAIN CONTAINER
+        ======================================== */
+
+        .page {
+
+            width: 100%;
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 70px 30px 90px;
+
+        }
+
+
+        /* ========================================
+           HEADER
+        ======================================== */
+
+        .header {
+
+            text-align: center;
+
+            margin-bottom: 55px;
+
+        }
+
+
+        .badge {
+
+            display: inline-block;
+
+            padding: 8px 20px;
+
+            border-radius: 30px;
+
+            border: 1px solid
+                rgba(140, 65, 45, 0.25);
+
+            background:
+                rgba(
+                    255,
+                    248,
+                    243,
+                    0.75
+                );
+
+            color: #8b4938;
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 22px;
+
+        }
+
+
+        h1 {
+
+            font-family:
+                'Playfair Display',
+                serif;
+
+            font-size:
+                clamp(
+                    42px,
+                    6vw,
+                    68px
+                );
+
+            color: #7b2e1d;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .subtitle {
+
+            font-size: 17px;
+
+            color: #9a604e;
+
+            max-width: 650px;
+
+            margin: auto;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* ========================================
+           DIVIDER
+        ======================================== */
+
+        .divider {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 14px;
+
+            margin-top: 30px;
+
+        }
+
+
+        .divider span {
+
+            width: 45px;
+
+            height: 1px;
+
+            background: #b97965;
+
+        }
+
+
+        .divider .heart {
+
+            color: #91402d;
+
+            font-size: 14px;
+
+        }
+
+
+        /* ========================================
+           REASONS LIST
+        ======================================== */
+
+        .reasons {
+
+            width: 100%;
+
+            max-width: 1000px;
+
+            margin: auto;
+
+        }
+
+
+        /* ========================================
+           REASON CARD
+        ======================================== */
+
+        .reason-card {
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            width: 100%;
+
+            min-height: 105px;
+
+            margin-bottom: 25px;
+
+            padding:
+                20px
+                70px
+                20px
+                25px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(
+                        255,
+                        255,
+                        255,
+                        0.97
+                    ),
+                    rgba(
+                        249,
+                        239,
+                        235,
+                        0.95
+                    )
+                );
+
+            border: 1px solid
+                rgba(
+                    176,
+                    113,
+                    92,
+                    0.22
+                );
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 12px 25px
+                rgba(
+                    91,
+                    39,
+                    28,
+                    0.10
+                );
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+        }
+
+
+        .reason-card:hover {
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 16px 30px
+                rgba(
+                    91,
+                    39,
+                    28,
+                    0.16
+                );
+
+        }
+
+
+        /* ========================================
+           TAPE
+        ======================================== */
+
+        .tape {
+
+            position: absolute;
+
+            width: 88px;
+
+            height: 25px;
+
+            top: -13px;
+
+            left: 50%;
+
+            transform:
+                translateX(-50%)
+                rotate(-1deg);
+
+            background:
+                repeating-linear-gradient(
+                    -45deg,
+
+                    rgba(
+                        192,
+                        149,
+                        131,
+                        0.62
+                    ),
+
+                    rgba(
+                        192,
+                        149,
+                        131,
+                        0.62
+                    ) 7px,
+
+                    rgba(
+                        229,
+                        201,
+                        188,
+                        0.72
+                    ) 7px,
+
+                    rgba(
+                        229,
+                        201,
+                        188,
+                        0.72
+                    ) 14px
+                );
+
+            z-index: 3;
+
+        }
+
+
+        /* ========================================
+           EMOJI BOX
+        ======================================== */
+
+        .emoji {
+
+            width: 54px;
+
+            height: 54px;
+
+            min-width: 54px;
+
+            border-radius: 16px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background:
+                rgba(
+                    255,
+                    252,
+                    250,
+                    0.95
+                );
+
+            border: 1px solid
+                rgba(
+                    169,
+                    104,
+                    84,
+                    0.25
+                );
+
+            box-shadow:
+                0 5px 12px
+                rgba(
+                    100,
+                    50,
+                    40,
+                    0.10
+                );
+
+            font-size: 25px;
+
+            margin-right: 20px;
+
+        }
+
+
+        /* ========================================
+           REASON TEXT
+        ======================================== */
+
+        .reason-text {
+
+            font-size: 17px;
+
+            font-weight: 500;
+
+            color: #7b321f;
+
+            line-height: 1.5;
+
+        }
+
+
+        /* ========================================
+           NUMBER HEART
+        ======================================== */
+
+        .number {
+
+            position: absolute;
+
+            right: 25px;
+
+            top: 50%;
+
+            transform:
+                translateY(-50%);
+
+            width: 40px;
+
+            height: 40px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            color: white;
+
+            font-size: 12px;
+
+            font-weight: 500;
+
+        }
+
+
+        /* Heart shape */
+
+        .number::before {
+
+            content: "♥";
+
+            position: absolute;
+
+            font-size: 43px;
+
+            color: #914027;
+
+            z-index: -1;
+
+        }
+
+
+        /* ========================================
+           BOTTOM TEXT
+        ======================================== */
+
+        .more {
+
+            text-align: center;
+
+            margin-top: 40px;
+
+            font-size: 15px;
+
+            color: #9a604e;
+
+        }
+
+
+        /* ========================================
+           NEXT BUTTON
+        ======================================== */
+
+        .next-area {
+
+            text-align: center;
+
+            margin-top: 35px;
+
+        }
+
+
+        .next-button {
+
+            display: inline-block;
+
+            text-decoration: none;
+
+            background: #86351f;
+
+            color: white;
+
+            padding:
+                14px 32px;
+
+            border-radius: 40px;
+
+            font-size: 15px;
+
+            box-shadow:
+                0 8px 20px
+                rgba(
+                    100,
+                    40,
+                    25,
+                    0.20
+                );
+
+            transition:
+                transform 0.3s ease,
+                background 0.3s ease;
+
+        }
+
+
+        .next-button:hover {
+
+            background: #a4472c;
+
+            transform:
+                translateY(-3px);
+
+        }
+
+
+        /* ========================================
+           MOBILE
+        ======================================== */
+
+        @media (max-width: 600px) {
+
+            .page {
+
+                padding:
+                    50px 15px 70px;
+
+            }
+
+
+            h1 {
+
+                font-size: 42px;
+
+            }
+
+
+            .subtitle {
+
+                font-size: 15px;
+
+            }
+
+
+            .reason-card {
+
+                min-height: 95px;
+
+                padding:
+                    18px
+                    55px
+                    18px
+                    15px;
+
+            }
+
+
+            .emoji {
+
+                width: 45px;
+
+                height: 45px;
+
+                min-width: 45px;
+
+                font-size: 21px;
+
+                margin-right: 13px;
+
+            }
+
+
+            .reason-text {
+
+                font-size: 14px;
+
+            }
+
+
+            .number {
+
+                right: 12px;
+
+            }
+
+
+            .number::before {
+
+                font-size: 38px;
+
+            }
+
+        }
+        /* ========================================
+   OUR SOUNDTRACK SECTION
+======================================== */
+
+.soundtrack-section {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 90px auto 40px;
+
+    padding: 65px 45px;
+
+    background:
+        rgba(255, 248, 243, 0.82);
+
+    border: 1px solid
+        rgba(176, 113, 92, 0.25);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 18px 40px
+        rgba(91, 39, 28, 0.12);
+
+    position: relative;
+}
+
+
+/* little tape on top */
+
+.soundtrack-section::before {
+    content: "";
+
+    position: absolute;
+
+    top: -13px;
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        rotate(-1deg);
+
+    width: 100px;
+    height: 27px;
+
+    background:
+        repeating-linear-gradient(
+            -45deg,
+
+            rgba(192, 149, 131, 0.62),
+            rgba(192, 149, 131, 0.62) 7px,
+
+            rgba(229, 201, 188, 0.72),
+            rgba(229, 201, 188, 0.72) 14px
+        );
+}
+
+
+/* HEADER */
+
+.soundtrack-header {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+
+.soundtrack-badge {
+    display: inline-block;
+
+    padding: 7px 18px;
+
+    border-radius: 30px;
+
+    border: 1px solid
+        rgba(140, 65, 45, 0.25);
+
+    color: #8b4938;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+
+.soundtrack-header h2 {
+    font-family:
+        'Playfair Display',
+        serif;
+
+    font-size: 42px;
+
+    color: #7b2e1d;
+
+    margin-bottom: 8px;
+}
+
+
+.soundtrack-header p {
+    font-family:
+        'Caveat',
+        cursive;
+
+    font-size: 25px;
+
+    color: #9a604e;
+}
+
+
+/* SONG CARD */
+
+.soundtrack-card {
+
+    max-width: 750px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    background:
+        rgba(248, 155, 155, 0.88);
+
+    border-radius: 22px;
+
+    border: 1px solid
+        rgba(176, 113, 92, 0.20);
+
+    box-shadow:
+        0 10px 25px
+        rgba(91, 39, 28, 0.08);
+}
+
+
+/* SONG DETAILS */
+
+.song-details {
+    text-align: center;
+}
+
+
+.music-icon {
+    font-size: 30px;
+
+    color: #914027;
+
+    margin-bottom: 8px;
+}
+
+
+.song-details h3 {
+    font-family:
+        'Playfair Display',
+        serif;
+
+    font-size: 30px;
+
+    color: #6A1E1E;
+
+    margin-bottom: 5px;
+}
+
+
+.song-details .artist {
+    color: #888;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+
+.song-details .memory {
+    font-family:
+        'Caveat',
+        cursive;
+
+    font-size: 22px;
+
+    color: #79504a;
+
+    margin-bottom: 25px;
+}
+
+
+/* SPOTIFY */
+
+.spotify-container {
+    width: 100%;
+}
+
+
+.spotify-container iframe {
+    display: block;
+
+    width: 100%;
+
+    border: none;
+
+    border-radius: 12px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .soundtrack-section {
+        margin-top: 70px;
+
+        padding: 50px 18px;
+    }
+
+    .soundtrack-header h2 {
+        font-size: 34px;
+    }
+
+    .soundtrack-header p {
+        font-size: 23px;
+    }
+
+    .soundtrack-card {
+        padding: 25px 15px;
+    }
+
+    .song-details h3 {
+        font-size: 26px;
+    }
+
+}
+/* ========================================
+   NEXT PAGE BUTTON
+======================================== */
+
+.next-page-area {
+    text-align: center;
+    margin-top: 45px;
+    padding-bottom: 60px;
+}
+
+.next-page-button {
+    display: inline-block;
+
+    text-decoration: none;
+
+    background: #86351f;
+
+    color: white;
+
+    padding: 14px 32px;
+
+    border-radius: 40px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 15px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(100, 40, 25, 0.20);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.next-page-button:hover {
+    background: #a4472c;
+
+    transform: translateY(-3px);
+}
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <main class="page">
+
+
+        <!-- ====================================
+             HEADER
+        ===================================== -->
+
+        <header class="header">
+
+
+            <div class="badge">
+
+                💗 &nbsp; 8 REASONS
+
+            </div>
+
+
+            <h1>
+
+                Things I Love<br>
+                About You
+
+            </h1>
+
+
+            <p class="subtitle">
+
+                The little things I love about you
+                <br>
+                and all the things I can't wait
+                to experience with you.
+
+            </p>
+
+
+            <div class="divider">
+
+                <span></span>
+
+                <span class="heart">♡</span>
+
+                <span></span>
+
+            </div>
+
+
+        </header>
+
+
+
+
+        <section class="reasons">
+
+
+            <!-- REASON 1 -->
+
+            <div class="reason-card">
+
+                <div class="tape"></div>
+
+                <div class="emoji">
+                    🫂
+                </div>
+
+                <p class="reason-text">
+
+                    Your hugs that I can't wait
+                    to finally have in person.
+
+                </p>
+
+                <div class="number">
+                    1
+                </div>
+
+            </div>
+
+
+
+            <!-- REASON 2 -->
+
+            <div class="reason-card">
+
+                <div class="tape"></div>
+
+                <div class="emoji">
+                    💗
+                </div>
+
+                <p class="reason-text">
+
+                    The way you make me feel
+                    loved even from far away.
+
+                </p>
+
+                <div class="number">
+                    2
+                </div>
+
+            </div>
+
+
+
+            <!-- REASON 3 -->
+
+            <div class="reason-card">
+
+                <div class="tape"></div>
+
+                <div class="emoji">
+                    🌙
+                </div>
+
+                <p class="reason-text">
+
+                    Our late-night conversations
+                    that I never want to end.
+
+                </p>
+
+                <div class="number">
+                    3
+                </div>
+
+            </div>
+
+
+
+            <!-- REASON 4 -->
+
+            <div class="reason-card">
+
+                <div class="tape"></div>
+
+                <div class="emoji">
+                    🥹
+                </div>
+
+                <p class="reason-text">
+
+                    The way even a small message
+                    from you can change my whole day.
+
+                </p>
+
+                <div class="number">
+                    4
+                </div>
+
+            </div>
+
+
+
+            <!-- REASON 5 -->
+
+            <div class="reason-card">
+
+                <div class="tape"></div>
+
+                <div class="emoji">
+                    🤝
+                </div>
+
+                <p class="reason-text">
+
+                    Knowing that no matter the distance,
+                    you're still my person.
+
+                </p>
+
+                <div class="number">
+                    5
+                </div>
+
+            </div>
+
+
+
+            <!-- REASON 6 -->
+
+            <div class="reason-card">
+
+                <div class="tape"></div>
+
+                <div class="emoji">
+                    😂
+                </div>
+
+                <p class="reason-text">
+
+                    Your ability to make me laugh
+                    even when I'm having a bad day.
+
+                </p>
+
+                <div class="number">
+                    6
+                </div>
+
+            </div>
+
+
+
+            <!-- REASON 7 -->
+
+            <div class="reason-card">
+
+                <div class="tape"></div>
+
+                <div class="emoji">
+                    🥰
+                </div>
+
+                <p class="reason-text">
+
+                    All the little moments we share,
+                    even when we're miles apart.
+
+                </p>
+
+                <div class="number">
+                    7
+                </div>
+
+            </div>
+
+            <!-- REASON 8 -->
+
+            <div class="reason-card">
+
+                <div class="tape"></div>
+
+                <div class="emoji">
+                    ❤️
+                </div>
+
+                <p class="reason-text">
+
+                    Simply because you're you,
+                    and I wouldn't choose anyone else.
+
+                </p>
+
+                <div class="number">
+                    8
+                </div>
+
+            </div>
+
+
+        </section>
+        <p class="more">
+
+            ...and a hundred more I ran out of room for ♡
+
+        </p>
+       <!-- ====================================
+     OUR SOUNDTRACK
+===================================== -->
+
+<section class="soundtrack-section">
+
+    <div class="soundtrack-header">
+
+        <div class="soundtrack-badge">
+            🎵 OUR SOUNDTRACK
+        </div>
+
+        <h2>For you & me</h2>
+
+        <p>
+            If our love had a soundtrack... ♡
+        </p>
+
+    </div>
+
+
+    <div class="soundtrack-card">
+
+        <div class="song-details">
+
+            <div class="music-icon">
+                ♫
+            </div>
+
+            <h3>
+                Until I Found You
+            </h3>
+
+            <p class="artist">
+                Stephen Sanchez
+            </p>
+
+            <p class="memory">
+                "The song that always reminds me of you." ♡
+            </p>
+
+        </div>
+        
+
+
+        <div class="spotify-container">
+
+            <iframe
+                src="https://open.spotify.com/embed/track/0T5iIrXA4p5GsubkhuBIKV?utm_source=generator"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+            </iframe>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- NEXT PAGE BUTTON -->
+
+<div class="next-page-area">
+
+    <a href="together.html" class="next-page-button">
+        Time Together ♡ →
+    </a>
+
+</div>
+
+
+    </main>
+
+
+</body>
+
+</html>
